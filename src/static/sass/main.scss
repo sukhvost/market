@@ -1,0 +1,10 @@
+@import 'moduls/reset';
+@import 'moduls/fonts';
+@import '../fonts/fontawesome/scss/fontawesome.scss';
+@import 'moduls/_header.scss';
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+    background: #fff;
+}
