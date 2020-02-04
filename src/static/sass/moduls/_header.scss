@@ -1,80 +1,190 @@
 @import '_var.scss';
+// all header
 .header {
     width: 100%;
     height: 43.4375rem;
     background: url('../img/header_bg.png') no-repeat bottom/contain;
+    a {
+        text-decoration: none;
+    }
 }
 
-.header a {
-    text-decoration: none;
-}
-
+// header-top
 .header_top {
+    font-size: 0.8125rem;
     width: 100%;
     padding: 1rem 0;
     position: relative;
-}
-
-.header_top::before {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 100%;
-    background: $decoration-color;
-    position: absolute;
-    bottom: 0;
+    &::before {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: $decoration-color;
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 .wrap {
-    width: $widthContainer;
-    margin: 0 auto;
+    @extend %wrap;
 }
 
 .wrap_flex {
-    display: flex;
-    justify-content: space-between;
+    @extend %flexSB;
 }
 
-.header_phone i {
-    padding-right: 1rem;
+.header_phone {
+    i {
+        padding-right: 1rem;
+    }
 }
 
-.text_color {
-    color: $main-color;
+.main_color {
+    @extend %color;
 }
 
-.personal a {
-    color: #000;
-}
-
-.block_arrow .arrow {
-    border: 2px solid $decoration-color;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    margin: 0 20px 0 10px;
-    cursor: pointer;
-}
-
-.block_arrow .down {
-    transform: rotate(45deg);
+.personal {
+    a {
+        color: #000;
+    }
 }
 
 .block_arrow {
     position: relative;
+    .arrow {
+        border: 2px solid $decoration-color;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 0 20px 0 10px;
+        cursor: pointer;
+    }
+    .down {
+        transform: rotate(45deg);
+    }
+    &::after {
+        display: block;
+        content: "";
+        width: 1px;
+        height: 1rem;
+        background: $decoration-color;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 
-.block_arrow::after {
-    display: block;
-    content: "";
-    width: 1px;
+.personal {
+    i {
+        margin: 0 10px 0 20px;
+    }
+}
+
+// header-center
+.header_center {
+    width: 100%;
+    padding: 1.375rem 0;
+}
+
+.center {
+    @extend %flex;
+    align-items: center;
+}
+
+// logo
+.block_logo {
+    width: 16.5625rem;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 2.5rem;
+    .upper {
+        text-transform: uppercase;
+    }
+}
+
+// block-search
+.block_search {
+    width: 40rem;
+    form {
+        width: 100%;
+        font-size: 0.8125rem;
+        border: 1px solid $main-color;
+        border-radius: 2rem;
+        position: relative;
+        input {
+            @extend %borderNone;
+            width: 65%;
+            padding: 1rem;
+            border-radius: 2rem 0 0 2rem;
+        }
+        select {
+            @extend %borderNone;
+            width: 24%;
+            option {
+                background: #fff;
+                border: none;
+                outline: none;
+            }
+        }
+        button {
+            @extend %borderNone;
+            background: $main-color;
+            width: 10%;
+            padding: 1.075rem;
+            border-radius: 0 2rem 2rem 0;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+// block-cart
+.block_cart {
+    margin-left: auto;
+    a {
+        color: #000;
+    }
+    .like {
+        position: relative;
+        @extend %inlineB;
+        @extend %marginR;
+    }
+    .cart {
+        position: relative;
+        @extend %inlineB;
+        @extend %marginR;
+    }
+    .sum {
+        font-size: 0.8125rem;
+        width: 5rem;
+        @extend %inlineB;
+        i {
+            @extend %inlineB;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-weight: 600;
+            @extend %inlineB;
+        }
+    }
+}
+
+.block_counter {
+    width: 1rem;
     height: 1rem;
-    background: $decoration-color;
+    border-radius: 50%;
+    background: $main-color;
     position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.personal i {
-    margin: 0 10px 0 20px;
+    right: -50%;
+    top: 0.5rem;
+    p {
+        font-size: 0.8rem;
+        font-weight: 100;
+        color: #fff;
+        text-align: center;
+        line-height: 1rem;
+    }
 }

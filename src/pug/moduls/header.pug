@@ -3,7 +3,7 @@ header.header
         .wrap
             .wrap_header.wrap_flex
                 p.phone.header_phone
-                    i.fas.fa-phone-alt.text_color
+                    i.fas.fa-phone-alt.main_color
                     | 8 800 00 00
                 .user_admin.wrap_flex
                     .change_val.wrap_flex
@@ -14,19 +14,44 @@ header.header
                     .personal
                         a(href="#")
                             i.fa.fa-user
-                            | Личный кабинет                                           
+                            | Личный кабинет
+    .header_center
+        .wrap
+            .wrap_header.center
+                .block_logo
+                    p.logo.header_logo
+                        span.upper My
+                        span.main_color Shop
+                .block_search
+                    form(action="#")
+                        .wrap_form
+                            input(type="text", name="search" placeholder="Название продукта")
+                            select(name="category")
+                                option(value="all_category") Все категории
+                                option(value="computers") Компьютеры и периферия
+                                option(value="notebooks") Ноутбуки и планшеты
+                                option(value="game") Игры и приставки
+                                option(value="audio") Аудиотехника
+                                option(value="photo") Фото и видео
+                                option(value="smartphone") Смартфоны
+                                option(value="TV") Телевизоры
+                                option(value="components") Комплектующие для ПК
+                            button
+                                i.fa.fa-search
+                .block_cart
+                    .like
+                        i.fa.fa-heart
+                        .block_counter
+                            p 0
+                    .cart
+                        a(href="#")
+                            i.fas.fa-shopping-bag
+                        .block_counter
+                            p 0
+                    .sum
+                        i.fas.fa-ruble-sign
+                        p 310 000
 
 
-        //-     p.pt-2.pb-2.phone.header_phone
-        //-         i(class="fas fa-phone-alt pr-2 text_color")
-        //-         | 8 800 00 00
 
-        //- .col-xl-8
-        //- .col-xl-2
-        //-     .choice_val.pt-2.pb-2
-        //-         .val
-        //-             i(class="fas fa-dollar-sign")
-        //-             i(class="far fa-chevron-down")
-        //-             img
-
-
+                                                                    

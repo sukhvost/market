@@ -1,4 +1,35 @@
-$main-color: #ffd700;
+$main-color: #ec9801;
 $decoration-color: #cad6d4;
 $fontRoboto: 'Roboto';
 $widthContainer: 73.75rem;
+$wrapMargin: 0 auto;
+%color {
+    color: $main-color;
+}
+
+%marginR {
+    margin-right: 2rem;
+}
+
+%inlineB {
+    display: inline-block;
+}
+
+%flex {
+    display: flex;
+}
+
+%flexSB {
+    display: flex;
+    justify-content: space-between;
+}
+
+%wrap {
+    width: $widthContainer;
+    margin: $wrapMargin;
+}
+
+%borderNone {
+    border: none;
+    outline: none;
+}
