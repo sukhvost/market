@@ -5,7 +5,7 @@
     height: 43.4375rem;
     background: url('../img/header_bg.png') no-repeat bottom/contain;
     a {
-        text-decoration: none;
+        color: #000;
     }
 }
 
@@ -42,12 +42,6 @@
 
 .main_color {
     @extend %color;
-}
-
-.personal {
-    a {
-        color: #000;
-    }
 }
 
 .block_arrow {
@@ -107,7 +101,7 @@
 
 // block-search
 .block_search {
-    width: 40rem;
+    width: 54%;
     form {
         width: 100%;
         font-size: 0.8125rem;
@@ -133,10 +127,14 @@
             @extend %borderNone;
             background: $main-color;
             width: 10%;
-            padding: 1.075rem;
             border-radius: 0 2rem 2rem 0;
             position: absolute;
             right: 0;
+            top: 0;
+            bottom: 0;
+            i {
+                font-size: 1.4rem;
+            }
         }
     }
 }
@@ -144,9 +142,6 @@
 // block-cart
 .block_cart {
     margin-left: auto;
-    a {
-        color: #000;
-    }
     .like {
         position: relative;
         @extend %inlineB;
@@ -172,19 +167,103 @@
     }
 }
 
-.block_counter {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: $main-color;
-    position: absolute;
-    right: -50%;
-    top: 0.5rem;
-    p {
-        font-size: 0.8rem;
-        font-weight: 100;
+.counter_like {
+    @extend %counter;
+}
+
+.counter_cart {
+    @extend %counter;
+}
+
+// header nav and slider
+.wrap_catal_and_slider {
+    @extend %flex;
+}
+
+.nav_catalog {
+    width: 22.8%;
+    .catalog {
+        width: 100%;
+        background: $main-color;
         color: #fff;
-        text-align: center;
-        line-height: 1rem;
+        font-weight: 900;
+        margin: 0 auto;
+        padding: 1rem 0.8rem;
+        border-radius: 10px 10px 0 0;
+        i {
+            margin-right: 1rem;
+        }
+    }
+    .nav {
+        background: #fff;
+        border-radius: 0 0 10px 10px;
+        font-size: 0.9rem;
+        .nav_list {
+            width: 100%;
+        }
+        .list_item {
+            width: 90%;
+            margin: 0 auto;
+            border-bottom: 1px solid $decoration-color;
+            &:last-child {
+                padding-bottom: 1.6rem;
+                border: none;
+            }
+        }
+        .display {
+            display: none;
+            position: absolute;
+            right: -100%;
+            color: #fff;
+        }
+        .nav_link {
+            display: block;
+            padding: 0.8rem 0;
+            text-decoration: none;
+            position: relative;
+            transition: ease-out .4s;
+            &:hover {
+                padding-left: 0.8rem;
+            }
+            &:hover>.block_arrow-right {
+                right: 0.2rem;
+            }
+        }
+        .block_arrow-right {
+            position: absolute;
+            right: 1rem;
+            bottom: 50%;
+            transform: translateY(50%);
+            transition: ease-out .4s;
+            .arrow {
+                border: 2px solid $decoration-color;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 3px;
+                cursor: pointer;
+            }
+            .right {
+                transform: rotate(-45deg);
+            }
+        }
+        .bold {
+            font-weight: 900;
+        }
+    }
+}
+
+.block_nav_and_slider {
+    flex: 1;
+}
+
+.nav_menu {
+    font-size: 0.9rem;
+    font-weight: 900;
+    li {
+        display: inline-block;
+        margin: 1.2rem 0 1.2rem 2rem;
+    }
+    a {
+        text-decoration: none;
     }
 }

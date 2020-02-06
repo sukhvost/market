@@ -9,7 +9,7 @@ header.header
                     .change_val.wrap_flex
                         .block_change_val
                             i.fa.fa-dollar-sign
-                        .block_arrow
+                        .block_arrow.decor
                             i.arrow.down
                     .personal
                         a(href="#")
@@ -41,16 +41,96 @@ header.header
                 .block_cart
                     .like
                         i.fa.fa-heart
-                        .block_counter
-                            p 0
+                        .counter_like
+                            p 12
                     .cart
                         a(href="#")
                             i.fas.fa-shopping-bag
-                        .block_counter
+                        .counter_cart
                             p 0
                     .sum
                         i.fas.fa-ruble-sign
                         p 310 000
+    .header_content
+        .wrap
+            .wrap_catal_and_slider
+                .nav_catalog
+                    h3.catalog
+                        i.fas.fa-bars
+                        | Каталог
+                    nav.nav   
+                        ul.nav_list
+                            li.list_item
+                                a(href="#" class="bold nav_link") Топ-100
+                            li.list_item
+                                a(href="#" class="bold nav_link") Новинки
+                            li.list_item
+                                a(href="#" class="bold nav_link") Распродажа
+                            li.list_item
+                                a(href="#" class="nav_link") Компьютеры и периферия
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Ноутбуки и планшеты
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Игры и приставки
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Аудиотехника
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Фото и видео
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item  
+                                a(href="#" class="nav_link") Смартфоны
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Телевизоры
+                                    .block_arrow-right
+                                        i.arrow.right
+                            li.list_item
+                                a(href="#" class="nav_link") Комплектующие для ПК
+                                    .block_arrow-right
+                                        i.arrow.right
+                        
+                .block_nav_and_slider
+                    nav.nav_menu
+                        ul
+                            li
+                                a(href='#').nav_menu-link.active Главная
+                            li
+                                a(href='#').nav_menu-link Каталог
+                            li
+                                a(href='#').nav_menu-link Новости
+                            li
+                                a(href='#').nav_menu-link Контакты
+                    .slider
+                        -var banner = [{description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_1.png'}, {description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_2.png'}, {description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_1.png'}];
+
+                        each intro in banner
+                            .slider_content
+                                .block_descr
+                                    h3.descr=intro.description
+                                    p.anotation=intro.anotation
+                                    p.period=intro.period
+                                    p.price=intro.priceBefore
+                                        span.priceAfter=intro.priceAfter
+                                    button Купить
+                                .block_img
+                                    img.banner(src=intro.img)
+                    .slider_coursour
+                            div
+                            div
+                            div
+                            div
+                            div
+                            div
 
 
 
