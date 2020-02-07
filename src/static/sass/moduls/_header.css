@@ -10,11 +10,11 @@
   display: inline-block;
 }
 
-.center, .wrap_catal_and_slider {
+.center, .wrap_catal_and_slider, .slider, .slider_content .block_descr .price {
   display: flex;
 }
 
-.wrap_flex {
+.wrap_flex, .slider_content {
   display: flex;
   justify-content: space-between;
 }
@@ -146,7 +146,7 @@
 
 .block_search form input {
   width: 65%;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 2rem 0 0 2rem;
 }
 
@@ -287,6 +287,8 @@
 
 .block_nav_and_slider {
   flex: 1;
+  width: 77.2%;
+  position: relative;
 }
 
 .nav_menu {
@@ -301,4 +303,100 @@
 
 .nav_menu a {
   text-decoration: none;
+  display: block;
+  transition: ease-in .4s;
+}
+
+.nav_menu a:hover {
+  color: #ec9801;
+}
+
+.nav_menu .active {
+  color: #ec9801;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider_content {
+  min-width: 100%;
+  padding-top: 6rem;
+  transition: ease-in .4s;
+}
+
+.slider_content .block_descr {
+  padding-left: 3rem;
+}
+
+.slider_content .block_descr .descr {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.slider_content .block_descr .anotation {
+  font-size: 1.5625rem;
+  font-weight: 400;
+  padding-top: 1.375rem;
+}
+
+.slider_content .block_descr .period {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-top: 1.375rem;
+}
+
+.slider_content .block_descr .price {
+  padding-top: 1.875rem;
+  align-items: flex-start;
+}
+
+.slider_content .block_descr .price .price_before {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin-right: 1rem;
+}
+
+.slider_content .block_descr .price .price_after {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ff2626;
+}
+
+.slider_content .block_descr button {
+  width: 13.125rem;
+  text-align: center;
+  color: #fff;
+  background: #ec9801;
+  padding: 0.875rem;
+  border-radius: 5px;
+  margin-top: 3.5625rem;
+  border: none;
+}
+
+.slider_coursour {
+  position: absolute;
+  bottom: 7rem;
+  left: 3rem;
+}
+
+.slider_coursour div {
+  display: inline-block;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.slider_coursour .slide {
+  width: 30px;
+  height: 8px;
+  background: #ec9801;
+  border-radius: 3px;
+}
+
+.slider_coursour .default_slide {
+  width: 8px;
+  height: 8px;
+  background: #cad6d4;
+  border-radius: 3px;
 }
