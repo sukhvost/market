@@ -114,7 +114,7 @@ header.header
                         -var banner = [{description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_1.png'}, {description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_2.png'}, {description: 'Microsoft Xbox', anotation: 'Твой путь в фантазию', period: 'До 14.03.2020 действует скидка', priceBefore: '15000', priceAfter: '12000', img: 'static/img/header_slider_1.png'}];
 
                         each intro in banner
-                            .slider_content
+                            .slider_content#js-slide
                                 .block_descr
                                     h3.descr=intro.description
                                     p.anotation=intro.anotation
@@ -126,9 +126,9 @@ header.header
                                 .block_img
                                     img.banner(src=intro.img)
                     .slider_coursour
-                            div.slide
-                            div.default_slide
-                            div.default_slide
+                            div.slide#js-click
+                            div.default_slide#js-click
+                            div.default_slide#js-click
 
 
 

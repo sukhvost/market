@@ -1,0 +1,16 @@
+.content
+    .wrap
+        .category_preview
+            -var blocksCategory = [{img: 'static/img/category_sales_1.png', description: 'Компьютеры, комплектующие и периферия', anotation: ''}, {img: 'static/img/category_sales_2.png', description: 'Ноутбуки и планшеты', anotation: 'более 250 товаров'}, {img: 'static/img/category_sales_3.png', description: 'Смартфоны', anotation: 'скидки до 70%'}];
+            each direct in blocksCategory
+                .block_preview
+                    .img_preview
+                        img(src=direct.img, alt="")
+                    .descr_preview
+                        .descr_block
+                            h2.description_preview=direct.description
+                            p.anotation_preview=direct.anotation
+                        .link_block
+                            a(href="#").link_more Подробнее
+                                .block_arrow-right.circle
+                                        i.arrow.right

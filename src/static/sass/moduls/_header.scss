@@ -288,9 +288,9 @@
 
 .slider_content {
     min-width: 100%;
-    padding-top: 6rem;
-    transition: ease-in .4s;
+    transition: ease-in .8s;
     @extend %flexSB;
+    align-items: center;
     .block_descr {
         padding-left: 3rem;
         .descr {
@@ -334,11 +334,14 @@
             border: none;
         }
     }
+    .banner {
+        width: min-content;
+    }
 }
 
 .slider_coursour {
     position: absolute;
-    bottom: 7rem;
+    bottom: 1rem;
     left: 3rem;
     div {
         display: inline-block;
