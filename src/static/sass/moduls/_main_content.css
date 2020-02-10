@@ -22,6 +22,7 @@
 
 .category_preview .block_preview:hover {
   box-shadow: 0 0 10px #bbb;
+  background: #fff;
 }
 
 .category_preview .img_preview {
